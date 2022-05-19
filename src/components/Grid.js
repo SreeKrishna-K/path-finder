@@ -1,15 +1,13 @@
 import React , {useState} from 'react'
 import ShowGrid from './ShowGrid'
 
-function Grid() {
-  const [grid, setGrid] = useState(new Array(32).fill(0).map(() => new Array(32).fill(0)));
-
+function Grid(props) {
   function handleClick(event){
     console.log(event.target);
   }
 
   return (
-    <ShowGrid grid={grid} onClick={handleClick} ></ShowGrid>
+    <ShowGrid grid={props.grid} onClick={handleClick} ></ShowGrid>
   )
 }
 
